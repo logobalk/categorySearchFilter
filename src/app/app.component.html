@@ -1,0 +1,13 @@
+<div>Total :{{ this.categoryList.count }}</div>
+<div>
+  Search Filter :
+  <input [(ngModel)]="filterTerm" />
+</div>
+<br />
+<div>
+  <table>
+    <tr *ngFor="let item of categoryList.categories | filter: filterTerm">
+      <td>{{ item }}</td>
+    </tr>
+  </table>
+</div>
